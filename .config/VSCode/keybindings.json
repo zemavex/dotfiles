@@ -1,0 +1,198 @@
+[
+  // FOCUS GIT VIEW
+  {
+    "key": "ctrl+shift+c",
+    "command": "workbench.view.scm"
+  },
+
+  // MOVE LINES
+  {
+    "key": "ctrl+j",
+    "command": "editor.action.moveLinesDownAction"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "editor.action.moveLinesUpAction"
+  },
+
+  // SUGGESTION SWITCH
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible || inCommandsPicker"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible || inCommandsPicker"
+  },
+
+  // COMMAND PALETTE SUGGESTION SWITCH
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+
+  // QUICK FIX SUGGESTION SWITCH
+  {
+    "key": "ctrl+j",
+    "command": "selectNextCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+
+  // EDITORS CONTROLS
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.previousEditor",
+    "when": "activeEditor"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.nextEditor",
+    "when": "activeEditor"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "workbench.action.moveEditorLeftInGroup",
+    "when": "activeEditor"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.moveEditorRightInGroup",
+    "when": "activeEditor"
+  },
+
+  // FOCUS EDITOR/EXPLORER/TERMINAL
+  {
+    "key": "ctrl+i",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+'",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+
+  // EXPLORER ACTIONS
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "!inputFocus && filesExplorerFocus"
+  },
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "!inputFocus && filesExplorerFocus"
+  },
+  {
+    "key": "shift+n",
+    "command": "explorer.newFolder",
+    "when": "!inputFocus && filesExplorerFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "!inputFocus && filesExplorerFocus"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "!inputFocus && filesExplorerFocus"
+  },
+  {
+    "key": "c",
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "when": "!inputFocus && filesExplorerFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "!inputFocus && filesExplorerFocus"
+  },
+
+  // TERMINAL
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+d",
+    "command": "workbench.action.terminal.resizePaneDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+u",
+    "command": "workbench.action.terminal.resizePaneUp",
+    "when": "terminalFocus"
+  },
+
+  // OPEN SETTINGS/KEYBINDINGS JSON
+  {
+    "key": "ctrl+,",
+    "command": "workbench.action.openSettingsJson"
+  },
+  {
+    "key": "ctrl+shift+,",
+    "command": "workbench.action.openGlobalKeybindingsFile"
+  },
+
+  // OPEN FOLDER
+  {
+    "key": "ctrl+shift+f",
+    "command": "workbench.action.files.openFileFolder"
+  },
+
+  // VIM REMAP
+  {
+    "key": "ctrl+u",
+    "command": "vim.remap",
+    "when": "editorTextFocus && vim.active && !inDebugRepl",
+    "args": {
+      "after": ["<C-u>"]
+    }
+  }
+
+  // ==========================
+  // == DISABLED KEYBINDINGS ==
+  // ==========================
+]

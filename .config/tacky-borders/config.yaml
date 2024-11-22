@@ -1,0 +1,41 @@
+accent: &accent "#8bd5ca"
+surface2: &surface2 "#5b6078"
+
+global:
+  border_width: 2
+  border_offset: -1
+  border_radius: 5
+  active_color: *accent
+  inactive_color: *surface2
+
+# Customize config options on a per-app basis
+window_rules:
+  - match: "Class"
+    name: "Windows.UI.Core.CoreWindow"
+    enabled: false
+
+  - match: "Class"
+    name: "XamlExplorerHostIslandWindow"
+    enabled: false
+
+  - match: "Title"
+    name: "Flow.Launcher"
+    enabled: false
+
+  - match: "Title"
+    name: "Zebar"
+    enabled: false
+
+  - match: "Title"
+    name: "keyviz"
+    enabled: false
+# EXAMPLE CONFIGURATION:
+# - match: "Class"               # Currently supports "Class" or "Title"
+#   name: "MozillaWindowClass"   # Name of the class or title
+#   strategy: "Equals"           # Optional. Currently supports "Equals", "Contains", or "Regex". Defaults to "Equals"
+#   border_width: 10             # The next few options are all optional and default to global config if nothing is specified
+#   border_radius: -10
+#   border_offset: -10
+#   active_color: "#ffffff"
+#   inactive_color: "#000000"
+#   enabled: true                # Optional. Enables or disables the border. Defaults to true. Note: you can't forcibly enable borders yet

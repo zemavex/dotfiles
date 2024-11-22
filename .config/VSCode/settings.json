@@ -1,0 +1,190 @@
+{
+  // =======================================
+  // =============== THEME =================
+  // =======================================
+
+  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.iconTheme": "catppuccin-macchiato",
+  "catppuccin.accentColor": "teal",
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono, Consolas, 'Courier New', monospace",
+  "workbench.startupEditor": "none",
+  "editor.stickyScroll.enabled": false,
+  "editor.minimap.enabled": false,
+  "window.title": "${dirty}${workspaceFolder}${separator}${rootNameShort}",
+  // "workbench.statusBar.visible": false,
+
+  // =======================================
+  // ============== UI TWEAKS ==============
+  // =======================================
+
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "editor.smoothScrolling": true,
+  "editor.lineNumbers": "relative",
+  "workbench.list.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "accessibility.dimUnfocused.enabled": true,
+  "accessibility.dimUnfocused.opacity": 0.5,
+  "explorer.compactFolders": false,
+  "window.menuBarVisibility": "compact",
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "bottom",
+
+  // =======================================
+  // =============== EDITOR ================
+  // =======================================
+
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+
+  // =======================================
+  // ============= BREADCRUMBS =============
+  // =======================================
+
+  "breadcrumbs.enabled": false,
+  "breadcrumbs.icons": false,
+  "breadcrumbs.showFiles": false,
+  "breadcrumbs.showArrays": false,
+  "breadcrumbs.showBooleans": false,
+  "breadcrumbs.showClasses": false,
+  "breadcrumbs.showConstants": false,
+  "breadcrumbs.showConstructors": false,
+  "breadcrumbs.showEnumMembers": false,
+  "breadcrumbs.showEnums": false,
+  "breadcrumbs.showEvents": false,
+  "breadcrumbs.showFields": false,
+  "breadcrumbs.showFunctions": false,
+  "breadcrumbs.showInterfaces": false,
+  "breadcrumbs.showKeys": false,
+  "breadcrumbs.showStrings": false,
+  "breadcrumbs.showModules": false,
+  "breadcrumbs.showNamespaces": false,
+  "breadcrumbs.showNull": false,
+  "breadcrumbs.showNumbers": false,
+  "breadcrumbs.showObjects": false,
+  "breadcrumbs.showOperators": false,
+  "breadcrumbs.showPackages": false,
+  "breadcrumbs.showProperties": false,
+  "breadcrumbs.showStructs": false,
+  "breadcrumbs.showTypeParameters": false,
+  "breadcrumbs.showVariables": false,
+  "breadcrumbs.showMethods": false,
+
+  // =======================================
+  // ============== TERMINAL ===============
+  // =======================================
+
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+  // =======================================
+  // ========== DEFAULT FORMATTER ==========
+  // =======================================
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // =======================================
+  // ================ OTHER ================
+  // =======================================
+
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "redhat.telemetry.enabled": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  // =======================================
+  // =======================================
+  // =======================================
+  // ============! EXTENSIONS !=============
+  // =======================================
+  // =======================================
+  // =======================================
+
+  // =======================================
+  // ================= VIM =================
+  // =======================================
+
+  "vim.leader": "<space>",
+  "vim.useCtrlKeys": false,
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.files.save"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "F"],
+      "commands": ["actions.find"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatDocument"],
+      "silent": true
+    },
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"],
+      "silent": true
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"],
+      "silent": true
+    },
+    {
+      "before": ["u"],
+      "commands": ["undo"],
+      "silent": true
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"],
+      "silent": true
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"],
+      "silent": true
+    }
+  ],
+
+  // =======================================
+  // =========== REACT SNIPPENTS ===========
+  // =======================================
+
+  "reactSnippets.settings.importReactOnTop": false,
+
+  // =======================================
+  // ========== PATH INTELLISENSE ==========
+  // =======================================
+  "typescript.suggest.paths": false,
+  /*end*/ "javascript.suggest.paths": false
+}

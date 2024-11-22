@@ -1,0 +1,7 @@
+{
+  "name": "dotfiles",
+  "scripts": {
+    "export": "powershell .config\\VSCode\\extensions\\exportExtensions.ps1",
+    "ahk": "powershell .config\\AutoHotKey\\shortcuts.ahk"
+  }
+}
