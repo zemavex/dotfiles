@@ -29,6 +29,14 @@ window_rules:
   - match: "Title"
     name: "keyviz"
     enabled: false
+
+  - match: "Title"
+    name: "Risk of Rain 2"
+    enabled: false
+
+  - match: "Title"
+    name: "Dead Cells"
+    enabled: false
 # EXAMPLE CONFIGURATION:
 # - match: "Class"               # Currently supports "Class" or "Title"
 #   name: "MozillaWindowClass"   # Name of the class or title
