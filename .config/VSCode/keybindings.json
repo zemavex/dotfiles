@@ -1,63 +1,29 @@
 [
-  // FOCUS GIT VIEW
+  // ==========================
+  // ======= VIEW FOCUS =======
+  // ==========================
+  {
+    "key": "ctrl+i",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+'",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
   {
     "key": "ctrl+shift+c",
     "command": "workbench.view.scm"
   },
 
-  // MOVE LINES
-  {
-    "key": "ctrl+j",
-    "command": "editor.action.moveLinesDownAction"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "editor.action.moveLinesUpAction"
-  },
+  // ==========================
+  // ========= EDITOR =========
+  // ==========================
 
-  // DISABLE ACCEPT SUGGESTION ON TAB
-  {
-    "key": "tab",
-    "command": "-acceptSelectedSuggestion"
-  },
-
-  // SUGGESTION SWITCH
-  {
-    "key": "ctrl+j",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetVisible || inCommandsPicker"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetVisible || inCommandsPicker"
-  },
-
-  // COMMAND PALETTE SUGGESTION SWITCH
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.quickOpenSelectPrevious",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.quickOpenSelectNext",
-    "when": "inQuickOpen"
-  },
-
-  // QUICK FIX SUGGESTION SWITCH
-  {
-    "key": "ctrl+j",
-    "command": "selectNextCodeAction",
-    "when": "codeActionMenuVisible"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "selectPrevCodeAction",
-    "when": "codeActionMenuVisible"
-  },
-
-  // EDITORS CONTROLS
+  // NAVIGATION
   {
     "key": "ctrl+h",
     "command": "workbench.action.previousEditor",
@@ -79,21 +45,45 @@
     "when": "activeEditor"
   },
 
-  // FOCUS EDITOR/EXPLORER/TERMINAL
+  // MOVE LINES
   {
-    "key": "ctrl+i",
-    "command": "workbench.action.focusActiveEditorGroup"
+    "key": "ctrl+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorFocus"
   },
   {
-    "key": "ctrl+o",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "ctrl+'",
-    "command": "workbench.files.action.focusFilesExplorer"
+    "key": "ctrl+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorFocus"
   },
 
-  // EXPLORER ACTIONS
+  // SUGGESTION SWITCH
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible || inCommandsPicker"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible || inCommandsPicker"
+  },
+
+  // QUICK FIX SUGGESTION SWITCH
+  {
+    "key": "ctrl+j",
+    "command": "selectNextCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevCodeAction",
+    "when": "codeActionMenuVisible"
+  },
+
+  // ==========================
+  // ======== EXPLORER ========
+  // ==========================
   {
     "key": "r",
     "command": "renameFile",
@@ -120,25 +110,27 @@
     "when": "!inputFocus && filesExplorerFocus"
   },
   {
-    "key": "c",
-    "command": "workbench.files.action.collapseExplorerFolders",
-    "when": "!inputFocus && filesExplorerFocus"
-  },
-  {
     "key": "p",
     "command": "filesExplorer.paste",
     "when": "!inputFocus && filesExplorerFocus"
   },
-
-  // TERMINAL
   {
-    "key": "ctrl+w",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus"
+    "key": "c",
+    "command": "workbench.files.action.collapseExplorerFolders",
+    "when": "!inputFocus && filesExplorerFocus"
   },
+
+  // ==========================
+  // ======== TERMINAL ========
+  // ==========================
   {
     "key": "ctrl+n",
     "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
   {
@@ -172,6 +164,22 @@
     "when": "terminalFocus"
   },
 
+  // ==========================
+  // ========== OTHER =========
+  // ==========================
+
+  // COMMAND PALETTE SUGGESTION SWITCH
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+
   // OPEN SETTINGS/KEYBINDINGS JSON
   {
     "key": "ctrl+,",
@@ -196,9 +204,15 @@
     "args": {
       "after": ["<C-u>"]
     }
-  }
+  },
 
   // ==========================
   // == DISABLED KEYBINDINGS ==
   // ==========================
+
+  // DISABLE ACCEPT SUGGESTION ON TAB
+  {
+    "key": "tab",
+    "command": "-acceptSelectedSuggestion"
+  }
 ]
