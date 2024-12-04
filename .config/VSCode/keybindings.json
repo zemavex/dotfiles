@@ -163,6 +163,18 @@
     "command": "workbench.action.terminal.resizePaneUp",
     "when": "terminalFocus"
   },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": { "text": "\u001b[A" },
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": { "text": "\u001b[B" },
+    "when": "terminalFocus"
+  },
 
   // ==========================
   // ========== OTHER =========
