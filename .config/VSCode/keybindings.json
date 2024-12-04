@@ -15,6 +15,12 @@
     "command": "editor.action.moveLinesUpAction"
   },
 
+  // DISABLE ACCEPT SUGGESTION ON TAB
+  {
+    "key": "tab",
+    "command": "-acceptSelectedSuggestion"
+  },
+
   // SUGGESTION SWITCH
   {
     "key": "ctrl+j",
