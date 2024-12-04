@@ -1,47 +1,39 @@
 {
-  // =======================================
-  // =============== THEME =================
-  // =======================================
-
+  // THEME
   "workbench.colorTheme": "Catppuccin Macchiato",
   "workbench.iconTheme": "catppuccin-macchiato",
-  "catppuccin.accentColor": "teal",
+  "catppuccin.accentColor": "blue",
   "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono, Consolas, 'Courier New', monospace",
-  "workbench.startupEditor": "none",
-  "editor.stickyScroll.enabled": false,
-  "editor.minimap.enabled": false,
-  "window.title": "${dirty}${workspaceFolder}${separator}${rootNameShort}",
-  // "workbench.statusBar.visible": false,
 
-  // =======================================
-  // ============== UI TWEAKS ==============
-  // =======================================
-
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.cursorBlinking": "smooth",
-  "editor.smoothScrolling": true,
-  "editor.lineNumbers": "relative",
-  "workbench.list.smoothScrolling": true,
-  "terminal.integrated.smoothScrolling": true,
+  // UI TWEAKS
   "accessibility.dimUnfocused.enabled": true,
   "accessibility.dimUnfocused.opacity": 0.5,
-  "explorer.compactFolders": false,
   "window.menuBarVisibility": "compact",
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
   "workbench.activityBar.location": "bottom",
+  "workbench.startupEditor": "none",
+  "window.title": "${dirty}${workspaceFolder}${separator}${rootNameShort}",
 
-  // =======================================
-  // =============== EDITOR ================
-  // =======================================
-
+  // EDITOR
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
+  "editor.quickSuggestions": { "strings": true },
+  "editor.stickyScroll.enabled": false,
+  "editor.minimap.enabled": false,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "editor.smoothScrolling": true,
+  "editor.lineNumbers": "relative",
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
 
-  // =======================================
-  // ============= BREADCRUMBS =============
-  // =======================================
+  // EXPLORER
+  "explorer.compactFolders": false,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.list.smoothScrolling": true,
 
+  // BREADCRUMBS
   "breadcrumbs.enabled": false,
   "breadcrumbs.icons": false,
   "breadcrumbs.showFiles": false,
@@ -71,16 +63,11 @@
   "breadcrumbs.showVariables": false,
   "breadcrumbs.showMethods": false,
 
-  // =======================================
-  // ============== TERMINAL ===============
-  // =======================================
-
+  // TERMINAL
   "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.smoothScrolling": true,
 
-  // =======================================
-  // ========== DEFAULT FORMATTER ==========
-  // =======================================
-
+  // DEFAULT FORMATTER
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -103,31 +90,18 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  // =======================================
-  // ================ OTHER ================
-  // =======================================
-
+  // OTHER
   "files.associations": {
     "*.json": "jsonc"
   },
   "security.workspace.trust.untrustedFiles": "open",
   "redhat.telemetry.enabled": false,
-  "editor.quickSuggestions": {
-    "strings": true
-  },
 
-  // =======================================
-  // =======================================
   // =======================================
   // ============! EXTENSIONS !=============
   // =======================================
-  // =======================================
-  // =======================================
 
-  // =======================================
-  // ================= VIM =================
-  // =======================================
-
+  // VIM
   "vim.leader": "<space>",
   "vim.useCtrlKeys": false,
   "vim.useSystemClipboard": true,
@@ -176,15 +150,12 @@
     }
   ],
 
-  // =======================================
-  // =========== REACT SNIPPENTS ===========
-  // =======================================
-
+  // REACT SNIPPENTS
   "reactSnippets.settings.importReactOnTop": false,
 
-  // =======================================
-  // ========== PATH INTELLISENSE ==========
-  // =======================================
-  "typescript.suggest.paths": false,
-  /*end*/ "javascript.suggest.paths": false
+  // STYLELINT
+  "stylelint.validate": ["css", "scss"],
+
+  // I18N-ALLY
+  "i18n-ally.annotations": false
 }
