@@ -75,12 +75,14 @@ workspaces:
   - name: "7"
   - name: "8"
   - name: "9"
+  - name: "]"
 
 window_rules:
   - commands: ["ignore"]
     match:
       # Ignores any Zebar windows.
       - window_process: { equals: "zebar" }
+      - window_process: { equals: "Risk of Rain 2" }
 
       # Ignores picture-in-picture windows for browsers.
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
@@ -210,6 +212,8 @@ keybindings:
     bindings: ["alt+8"]
   - commands: ["focus --workspace 9"]
     bindings: ["alt+9"]
+  - commands: ["focus --workspace ]"]
+    bindings: ["alt+]"]
 
   # Move the focused window's parent workspace to a monitor in a given
   # direction.
@@ -243,5 +247,6 @@ keybindings:
     bindings: ["alt+shift+9"]
 
   # Custom
-  - commands: ["shell-exec %userprofile%/.glzr/glazewm/zebarRestart.bat"]
+  - commands:
+      ["shell-exec cmd.exe /c taskkill /IM zebar.exe /F & start zebar.exe"]
     bindings: ["alt+shift+z"]
