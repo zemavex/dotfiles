@@ -26,23 +26,61 @@
   // NAVIGATION
   {
     "key": "ctrl+h",
-    "command": "workbench.action.previousEditor",
-    "when": "activeEditor"
+    "command": "workbench.action.previousEditorInGroup"
   },
   {
     "key": "ctrl+l",
-    "command": "workbench.action.nextEditor",
-    "when": "activeEditor"
+    "command": "workbench.action.nextEditorInGroup"
   },
   {
     "key": "ctrl+shift+h",
-    "command": "workbench.action.moveEditorLeftInGroup",
-    "when": "activeEditor"
+    "command": "workbench.action.moveEditorLeftInGroup"
   },
   {
     "key": "ctrl+shift+l",
-    "command": "workbench.action.moveEditorRightInGroup",
-    "when": "activeEditor"
+    "command": "workbench.action.moveEditorRightInGroup"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "workbench.action.splitEditor"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+shift+alt+h",
+    "command": "workbench.action.moveEditorToLeftGroup"
+  },
+  {
+    "key": "ctrl+shift+alt+l",
+    "command": "workbench.action.moveEditorToRightGroup"
+  },
+
+  // RESIZE
+  {
+    "key": "ctrl+alt+p",
+    "command": "workbench.action.increaseViewWidth",
+    "when": "!terminalFocus && !sideBarFocus"
+  },
+  {
+    "key": "ctrl+alt+u",
+    "command": "workbench.action.decreaseViewWidth",
+    "when": "!terminalFocus && !sideBarFocus"
+  },
+  {
+    "key": "ctrl+alt+o",
+    "command": "workbench.action.increaseViewHeight",
+    "when": "!terminalFocus && !sideBarFocus"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "workbench.action.decreaseViewHeight",
+    "when": "!terminalFocus && !sideBarFocus"
   },
 
   // MOVE LINES
@@ -119,6 +157,32 @@
     "command": "workbench.files.action.collapseExplorerFolders",
     "when": "!inputFocus && filesExplorerFocus"
   },
+  {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+alt+p",
+    "command": "workbench.action.increaseViewSize",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "ctrl+alt+u",
+    "command": "workbench.action.decreaseViewSize",
+    "when": "sideBarFocus"
+  },
+  {
+    "command": "runCommands",
+    "key": "enter",
+    "args": {
+      "commands": [
+        "explorer.openAndPassFocus",
+        "workbench.action.moveEditorToFirstGroup",
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    },
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
+  },
 
   // ==========================
   // ======== TERMINAL ========
@@ -144,6 +208,26 @@
     "when": "terminalFocus"
   },
   {
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+v",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+v",
+    "command": "workbench.action.terminal.unsplit",
+    "when": "terminalFocus"
+  },
+  {
     "key": "ctrl+u",
     "command": "workbench.action.terminal.scrollUp",
     "when": "terminalFocus"
@@ -154,12 +238,12 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+d",
+    "key": "ctrl+alt+i",
     "command": "workbench.action.terminal.resizePaneDown",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+u",
+    "key": "ctrl+alt+o",
     "command": "workbench.action.terminal.resizePaneUp",
     "when": "terminalFocus"
   },
@@ -173,6 +257,11 @@
     "key": "ctrl+j",
     "command": "workbench.action.terminal.sendSequence",
     "args": { "text": "\u001b[B" },
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+/",
+    "command": "workbench.action.terminal.rename",
     "when": "terminalFocus"
   },
 
@@ -222,9 +311,13 @@
   // == DISABLED KEYBINDINGS ==
   // ==========================
 
-  // DISABLE ACCEPT SUGGESTION ON TAB
   {
     "key": "tab",
     "command": "-acceptSelectedSuggestion"
+  },
+  {
+    "key": "enter",
+    "command": "-explorer.openAndPassFocus",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus"
   }
 ]
